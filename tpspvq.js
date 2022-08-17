@@ -9,8 +9,8 @@ if (sousTotal < 0) {
     console.log("sous-total invalide");
 }
 else {
-    console.log(`Sous-total: ${sousTotal.toFixed(2)}`);
-    console.log(`TPS: ${tps.toFixed(2)}`);
-    console.log(`TVQ: ${tvq.toFixed(2)}`);
-    console.log(`Total: ${total.toFixed(2)}`);
-}
+    console.log(`Sous-total : ${sousTotal.toFixed(2)}`);
+    console.log(`TPS        : ${tps.toFixed(2)}`);
+    console.log(`TVQ        : ${tvq.toFixed(2)}`);
+    console.log(`Total      : ${total.toFixed(2)}`);
+}   
