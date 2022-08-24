@@ -7,20 +7,24 @@ function Personne(prenom, nom, autresPrenom, date, sexe, fumeur, poids, taille) 
     this.fumeur = fumeur;
     this.mesures = {
         poids : poids,
-        taille : taille
+        taille : taille,
     };
+
     this.imc = function() {
-        console.log(this.poids / ((this.taille / 100) * (this.taille / 100)));
+         return(poids / ((taille / 100) * (taille / 100)));
     };
-  this.getNomComplet = function () {
-       return  this.prenom + " " + this.nom;
+  this.getNomComplet = function (Fullname) {
+    return(this.prenom + " " + this.nom);
     };
-
 }
-
 const jean = new Personne("Jean", "Arrache", "Maiden", "1984-02-29", "m", false, 80, 175);
 const elva = new Personne("Elva", "Trovite", "Marie-Eva", "1990-06-07T00:00:00.000Z", "f", false, 50, 160);
 const Jean_Marc = new Personne("Jean-Marc", "Desbuttes", "", "1954-09-17T00:00:00.000Z", "m", true, 90, 190);
 const Jessica = new Personne("Jessica", "Potreau", "Ella", "1999-11-24T00:00:00.000Z", "f", true, 85, 155);
 const personnes = [jean, elva, Jean_Marc, Jessica];
-console.log(personnes.prenom + " " + personnes.nom + " " + personnes.imc);
+personnes.sort(function(a, b) {
+    return parseFloat(a.imc()) - parseFloat(b.imc());
+});
+personnes.forEach(function(element) {
+  console.log(element.getNomComplet() + " : " + element.imc());
+});
