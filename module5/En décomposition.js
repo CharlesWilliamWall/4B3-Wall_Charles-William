@@ -22,6 +22,9 @@ const elva = new Personne("Elva", "Trovite", "Marie-Eva", "1990-06-07T00:00:00.0
 const Jean_Marc = new Personne("Jean-Marc", "Desbuttes", "", "1954-09-17T00:00:00.000Z", "m", true, 90, 190);
 const Jessica = new Personne("Jessica", "Potreau", "Ella", "1999-11-24T00:00:00.000Z", "f", true, 85, 155);
 const personnes = [jean, elva, Jean_Marc, Jessica];
+
+
+
 personnes.forEach(function(element) {
   console.log(element.prenom + " " + element.nom);
 });

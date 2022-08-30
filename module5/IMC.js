@@ -10,12 +10,12 @@ function personne(prenom, nom, autresPrenom, date, sexe, fumeur, poids, taille) 
         taille: taille;
     };
     getNomComplet = function() {
-        console.log(prenom + " " + nom);
+        return prenom + " " + nom;
     };
     imc = function() {
-        console.log(poids / ((taille / 100) * (taille / 100)));
+        return (poids / ((taille / 100) * (taille / 100))).toFixed(2);
     }
 }
 let jean = new personne("Jean", "Arrache", "Maiden", "1984-02-29", "m", false, 80, 175);
-getNomComplet(jean);
-imc();
+console.log(getNomComplet());
+console.log(imc());
