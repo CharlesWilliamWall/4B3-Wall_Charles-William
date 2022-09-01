@@ -1,0 +1,16 @@
+#contenu{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+.prenom{
+    margin-top: 5px;
+    font-size: 2rem;
+}
+.age{
+    margin-top: 5px;
+    font-size: 2rem;
+}
+.nom{
+}
