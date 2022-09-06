@@ -2,9 +2,12 @@ function ajouterNombre() {
     const nombreInt = prompt("Entrez votre nombre");
     let nombre = Number(nombreInt);
     let contenu = document.getElementById("contenu");
-    let newUl = document.createElement("ul");
+    let newUl = document.getElementById("ulContent");
+    if(newUl==null){
+        newUl = document.createElement("ul");
+        newUl.id = "ulContent";
+    }
     let newLi = document.createElement("li");
-
     if (!isNaN(nombre)) {
         newLi.innerHTML = nombre;
         contenu.appendChild(newUl);
