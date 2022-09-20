@@ -1,5 +1,5 @@
 box.addEventListener("mousemove", giveXY);
-function giveXY() {
+function giveXY(event) {
     let x = event.clientX;
     let y = event.clientY;
     let pos = document.getElementById("position");
